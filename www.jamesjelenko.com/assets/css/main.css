@@ -26,6 +26,8 @@ footer, header, hgroup, menu, nav, section {
 	display: block;}
 
 body {
+	scroll-snap-type: y proximity;
+	overflow-y: scroll;
 	line-height: 1;
 }
 
@@ -2144,7 +2146,9 @@ input, select, textarea {
 		}
 
 /* Section/Article */
-
+	.section {
+		scroll-snap-align: start;
+	}
 	section.special, article.special {
 		text-align: center;
 	}
@@ -4264,11 +4268,3 @@ fade-in {
   animation: electron-effect 2s linear infinite;
 }
 
-@keyframes electron-effect {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
