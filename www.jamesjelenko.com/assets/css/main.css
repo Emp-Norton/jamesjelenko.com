@@ -4268,3 +4268,48 @@ fade-in {
   animation: electron-effect 2s linear infinite;
 }
 
+@keyframes electron-effect {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.divider {
+	position: relative;
+	transition: transform 0.3s ease-in-out; /* for smooth scaling */
+}
+
+.divider.greyed {
+	filter: grayscale(90%); /* adjust the percentage to your liking */
+	opacity: 0.5; /* adjust the opacity to your liking */
+}
+
+.divider:hover {
+	filter: none;
+	opacity: 1;
+	transform: scale(1.3); /* adjust the scaling factor to your liking */
+}
+
+.divider.lift:hover {
+	animation: lift-shadow 1s;
+	/*background-color: blue;*/
+}
+
+@keyframes lift-shadow {
+	0% {
+		/*transform: scale(1); !* Normal size *!*/
+		box-shadow: 0 0 0 0; /* No glow */
+	}
+	50% {
+		/*transform: scale(5); !* Swell by 20% *!*/
+		box-shadow: powderblue 15px 15px 15px 15px;
+	}
+	100% {
+		/*transform: scale(1); !* Return to normal size *!*/
+		box-shadow: 0 0 0 0; /* Remove glow */
+	}
+}
+>>>>>>> Stashed changes

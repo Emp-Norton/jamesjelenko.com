@@ -3,7 +3,7 @@
 
 
 .gradient-border {
-  --border-width: 1px;
+  --border-width: 11px;
 
   position: relative;
   display: flex;
@@ -50,3 +50,48 @@
     background-position: 100% 50%;
   }
 }
+#test {
+  transition: all 0.5s; /* Set a transition effect for 0.5 seconds */
+  border-radius: 5px;
+}
+
+#test:focus, #test:hover { /* Apply animation on focus and page load */
+  animation: swell-glow 1s;
+}
+
+@keyframes swell-glow {
+  0% {
+    transform: scale(1); /* Normal size */
+    box-shadow: none; /* No glow */
+  }
+  50% {
+    transform: scale(5); /* Swell by 20% */
+    font-size: large;
+  }
+  100% {
+    transform: scale(1); /* Return to normal size */
+    box-shadow: none; /* Remove glow */
+  }
+}
+
+.divider  .lift:hover {
+  animation: lift-shadow 1s;
+  background-color: blue;
+}
+
+@keyframes lift-shadow {
+  0% {
+    transform: scale(1); /* Normal size */
+    box-shadow: 0 0 0 0; /* No glow */
+  }
+  50% {
+    transform: scale(5); /* Swell by 20% */
+    box-shadow: powderblue 15px 15px 15px 15px;
+  }
+  100% {
+    transform: scale(1); /* Return to normal size */
+    box-shadow: 0 0 0 0; /* Remove glow */
+  }
+}
+
+>>>>>>> Stashed changes
